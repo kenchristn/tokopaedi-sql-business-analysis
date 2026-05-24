@@ -1,10 +1,104 @@
-# Tokopaedi SQL Business Analysis
-📊 SQL business analysis project on Tokopaedi e-commerce dataset covering sales, customers, products, and marketing funnel insights.
+# 📊 Tokopaedi SQL Business Analysis
 
-## 📊 Overview
+SQL business analysis project on Tokopaedi e-commerce dataset covering sales, customers, products, and marketing funnel insights.
+
+---
+
+## 📖 Overview
 
 This project analyzes Tokopaedi e-commerce business performance using SQL based on transaction, customer, product, payment, and marketing funnel datasets.
-The objective is to identify sales trends, customer behavior, product category performance, and channel effectiveness to support data-driven business decisions.
+
+The analysis focuses on identifying sales trends, customer behavior, product category performance, and channel effectiveness to support data-driven business decisions.
+
+This project was completed as part of the **Final Project – Data Analyst Bootcamp (MySkill Batch 27).**
+
+---
+
+## 🎯 Business Objectives
+
+This analysis focuses on 5 business use cases:
+
+### 1️⃣ Monthly Revenue Analysis (Board of Directors)
+
+Analyze total monthly revenue in 2024 to identify seasonal trends and revenue patterns.
+
+### 2️⃣ Product Category Performance (Warehouse Manager)
+
+Analyze quantity sold by category from 2020–2024 to support inventory planning and restock strategy.
+
+### 3️⃣ Channel Performance Comparison (Marketing Manager)
+
+Compare revenue and order growth between 2023 and 2024 by sales channel.
+
+### 4️⃣ Organic Funnel Conversion Analysis
+
+Measure event-to-order conversion rate to evaluate marketing channel effectiveness.
+
+### 5️⃣ Customer Activation Analysis (BI & CRM Lead)
+
+Measure customer acquisition and average time from registration to first purchase.
+
+---
+
+## 🗂️ Dataset
+
+The project uses 6 related datasets:
+
+| Table | Description |
+|---|---|
+| `order_detail` | Order transaction detail |
+| `transaction_detail` | Transaction payment summary |
+| `product_detail` | Product catalog |
+| `customer_detail` | Customer profile |
+| `payment_detail` | Payment methods |
+| `funnel_detail` | Marketing funnel activity |
+
+📦 For repository optimization, datasets are stored in:
+
+`dataset.zip`
+
+---
+
+## 🗄️ Database Schema
+
+The datasets are connected through relational keys:
+
+- `customer_id`
+- `transaction_id`
+- `order_id`
+- `sku_id`
+
+These relationships enable end-to-end analysis between:
+
+✅ Customers  
+✅ Orders  
+✅ Products  
+✅ Payments  
+✅ Marketing funnel activities  
+
+---
+
+## 🧹 Data Preparation
+
+Before analysis, the data was prepared by:
+
+✅ Checking duplicate values on each table
+
+✅ Checking null values
+
+✅ Validating relationships between tables
+
+✅ Converting raw files into CSV format
+
+### Findings
+
+✔️ No duplicate values found
+
+✔️ Most tables contain complete data
+
+⚠️ `funnel_detail.order_id` contains null values but was kept because it does not affect the analysis
+
+---
 
 ## 🛠️ Tools Used
 
@@ -15,94 +109,134 @@ The objective is to identify sales trends, customer behavior, product category p
 - Business Analysis
 - Google Slides / PDF Presentation
 
+---
+
 ## 📁 Project Structure
 
 ```bash
 tokopaedi-sql-business-analysis/
 ├── README.md
 ├── Final Project DA27 - C6 - SQL Task.pdf
-│
-├── dataset/
-│   ├── customer_detail.csv
-│   ├── funnel_detail.csv
-│   ├── order_detail.csv
-│   ├── payment_detail.csv
-│   ├── product_detail.csv
-│   └── transaction_detail.csv
+├── dataset.zip
 │
 ├── sql/
-│   ├── 01_data_preparation.sql
-│   ├── 02_study_case_1.sql
-│   ├── 03_study_case_2.sql
-│   ├── 04_study_case_3.sql
-│   ├── 05_study_case_4.sql
-│   └── 06_study_case_5.sql
+│   ├── finpro-1.sql
+│   ├── finpro-2.sql
+│   ├── finpro-3.sql
+│   ├── finpro-4.sql
+│   └── finpro-5.sql
 │
 └── assets/
 ```
 
 ---
 
+## 💻 SQL Analysis Files
+
+The SQL queries are organized into 5 business case studies:
+
+| File | Analysis |
+|---|---|
+| `finpro-1.sql` | Monthly revenue analysis (2024) |
+| `finpro-2.sql` | Product category performance |
+| `finpro-3.sql` | Channel growth comparison (2023 vs 2024) |
+| `finpro-4.sql` | Organic funnel conversion analysis |
+| `finpro-5.sql` | Customer activation analysis |
+
+---
+
 ## 🔍 Key Insights
 
-📈 Revenue showed strong seasonal peaks in Q4
+### 📈 Revenue Trend
 
-🛍️ Customer demand shifted toward lifestyle categories:
+- Sales showed a clear seasonal pattern
+- Q4 generated the highest revenue
+- Mid-year experienced a decline
+
+### 🛍️ Product Category Shift
+
+Customer demand shifted toward lifestyle categories:
+
 - Fashion & Footwear
 - Beauty & Personal Care
 
-🌐 Website generated the highest traffic but conversion can be improved
+while some categories remained stable or lower-performing.
 
-🏪 Offline Store showed the strongest growth
+### 🌐 Channel Performance
 
-👤 Mobile App acquired more customers but took longer to convert
+- Offline Store showed the strongest growth
+- Website generated the highest traffic
+- Mobile App gained more users but converted slower
 
-## 📄 Project Documentation
+### 🎯 Funnel Conversion
 
-This project is presented in report format and includes:
+- Play Store and App Store showed the highest conversion rates
+- Website still has strong optimization opportunities
 
-📌 Dataset overview  
-📌 Database schema  
-📌 Data preparation  
-📌 SQL query explanation  
-📌 Business insights  
-📌 Recommendations  
+### 👥 Customer Activation
 
-Supporting files include:
-
-📂 Final project presentation (PDF)  
-📂 Raw datasets (CSV)  
-📂 SQL query files  
-📂 Supporting screenshots  
+- Website users converted faster
+- Mobile App users needed longer time to complete first purchase
 
 ---
 
-## 🛠️ Key SQL Skills Practiced
+## 💡 Recommendations
 
-During this project I practiced:
+### 🚀 Optimize High-Growth Categories
 
-✅ Data cleaning & validation  
-✅ SQL JOIN  
-✅ Common Table Expression (CTE)  
-✅ Aggregation & filtering  
-✅ Date formatting  
-✅ Growth analysis  
-✅ Conversion rate calculation  
-✅ Business insight generation  
+Focus inventory and promotion on:
+
+- Fashion & Footwear
+- Beauty & Personal Care
+
+### 🌐 Improve Website Conversion
+
+Increase conversion through:
+
+- UX/UI improvements
+- Funnel optimization
+- Retargeting strategy
+
+### 📦 Prepare for Peak Season
+
+Maximize Q4 through:
+
+- Stock planning
+- Promotions
+- Operational readiness
+
+### 👤 Improve Customer Activation
+
+Accelerate first purchase with:
+
+- Better onboarding
+- Email reminders
+- Promotional campaigns
 
 ---
 
-## 🚀 Learning Outcomes
+## 📚 Learning Outcomes
 
 Through this project I improved my ability to:
 
-📊 Analyze business problems using SQL  
-🗂️ Work with relational datasets  
-💡 Translate business requirements into SQL queries  
-📈 Generate actionable business insights  
-📝 Present findings clearly for stakeholders
+📊 Analyze business problems using SQL
+
+🗂️ Work with relational datasets
+
+🔗 Perform JOIN and CTE queries
+
+📈 Generate business insights from SQL output
+
+💡 Translate findings into recommendations
+
+📝 Present analytical findings clearly for stakeholders
+
+---
 
 ## 👤 Author
 
-Kenneth Christian Nathanael
+**Kenneth Christian Nathanael**
+
 Data Analyst | SQL | Dashboard | AI & Automation
+
+GitHub: https://github.com/kenchristn
