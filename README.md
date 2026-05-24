@@ -1,5 +1,19 @@
-# tokopaedi-sql-business-analysis
+# Tokopaedi SQL Business Analysis
 📊 SQL business analysis project on Tokopaedi e-commerce dataset covering sales, customers, products, and marketing funnel insights.
+
+## 📊 Overview
+
+This project analyzes Tokopaedi e-commerce business performance using SQL based on transaction, customer, product, payment, and marketing funnel datasets.
+The objective is to identify sales trends, customer behavior, product category performance, and channel effectiveness to support data-driven business decisions.
+
+## 🛠️ Tools Used
+
+- SQL (Google BigQuery)
+- CSV Dataset
+- Data Cleaning
+- Exploratory Data Analysis
+- Business Analysis
+- Google Slides / PDF Presentation
 
 ## 📁 Project Structure
 
@@ -28,6 +42,20 @@ tokopaedi-sql-business-analysis/
 ```
 
 ---
+
+## 🔍 Key Insights
+
+📈 Revenue showed strong seasonal peaks in Q4
+
+🛍️ Customer demand shifted toward lifestyle categories:
+- Fashion & Footwear
+- Beauty & Personal Care
+
+🌐 Website generated the highest traffic but conversion can be improved
+
+🏪 Offline Store showed the strongest growth
+
+👤 Mobile App acquired more customers but took longer to convert
 
 ## 📄 Project Documentation
 
@@ -73,3 +101,8 @@ Through this project I improved my ability to:
 💡 Translate business requirements into SQL queries  
 📈 Generate actionable business insights  
 📝 Present findings clearly for stakeholders
+
+## 👤 Author
+
+Kenneth Christian Nathanael
+Data Analyst | SQL | Dashboard | AI & Automation
